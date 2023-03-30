@@ -84,3 +84,36 @@ function convertDogAgeToHumanAge(dogAge) {
     return humanAge
 }
   console.log(convertDogAgeToHumanAge(5));
+
+
+// ? Create a function called `divisible`
+// ? Takes 2 parameters firstNum, secondNum
+// ? Return true if it divides evenly otherwise returns false
+// ? Refactor the code to return a turnary
+
+
+function divisible(firstNum, secondNum) {
+    return firstNum % secondNum === 0;
+  }
+  console.log(divisible(22.2))
+
+  // When you are using arrow functions that are one line
+// - omit the return because it is assumed
+const divisible2 = (firstNum, secondNum)=> firstNum % secondNum === 0;
+
+
+// ? Create a function using the arrow function method called difference
+// ? The function will return the diffence between the two numbers(posative Number)
+const difference=(firstNum,secondNum)=>{
+  let diff =Math.abs(firstNum-secondNum)
+  return diff
+}
+console.log(difference(6,10))
+
+// ! Arrow Function DANGER: they do not get hoisted. They need to be initialized first (place them above your code before you call it).
+
+function userInputCleaner(word) {
+  return word.toLowerCase().trim();
+}
+
+console.log(userInputCleaner("    RaZZLE DAZzlen   " ));
