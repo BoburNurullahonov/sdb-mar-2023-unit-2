@@ -1,5 +1,5 @@
 const readline = require("readline");
-
+const computerResponse = require("./input-ouput-computer");
 const readlineInterface = readline.createInterface(
   process.stdin,
   process.stdout
@@ -13,26 +13,26 @@ function ask(questionText) {
 
 async function start() {
   console.log("This works!!!!");
-  let firstName = await ask("What is your name?");
+  let firstName = await ask("What is your name? ");
   firstName = correctCasing(firstName);
-  computerResponse(`good morning ${firstName}`)
+  // console.log("inside the start", x);
+  computerResponse(`Good Morning, ${firstName}`);
 }
 
 start();
 
-function computerResponse(string) {
-    let white = "\033[0;39m"
-    let yellow = "\033[0;33m"
+// function computerResponse(string) {
+//   let white = "\033[0;39m";
+//   let yellow = "\033[0;33m";
 
-    console.log(yellow + string + white)
-}
+//   console.log(yellow + string + white);
+// }
 
 function correctCasing(word) {
   let wordLowerCase = word.toLowerCase();
   let capitalized = word.charAt(0).toUpperCase() + wordLowerCase.slice(1);
   return capitalized;
 }
-
 /* 
 How to get this program to start.
 1. Right the file > Open Integrated Terminal
